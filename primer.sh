@@ -8,7 +8,7 @@ JBENABLED_FOLDER=$JBAPPROOT/enabled
 JBAVAILABLE_FOLDER=$JBAPPROOT/available
 JBENABLED_FILES=$JBAPPROOT/enabled/*.sh
 
-for f in $JBENABLED_FOLDER
+for f in $JBENABLED_FILES
 do
   source $f
 done
