@@ -1,5 +1,6 @@
 ## Colorize the ls output ##
-alias ls='ls -G --color=auto'
+export CLICOLOR=1
+export LSCOLORS=GxFxCxDxBxegedabagaced
 ## Use a long listing format ##
 alias ll='ls -lh'
 alias lla='ls -lah'
@@ -28,8 +29,6 @@ alias searchapt='apt-cache search $1'
 alias installapt='sudo apt-get install -y $1'
 alias updateapt='sudo apt-get update; sudo apt-get upgrade'
 alias updateapt-dist='sudo apt-get update; sudo apt-get dist-upgrade'
-
-alias mount-host-downloads='sudo mount -t vboxsf -o uid=$UID,gid=$(id -g) host_downloads $HOME/host/downloads'
 
 #fedora / redhat
 alias dnfu='sudo dnf -y clean all; sudo dnf -y update'
