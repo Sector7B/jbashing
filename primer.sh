@@ -2,10 +2,11 @@
 
 #alias jbashingupdate='wget -N https://bitbucket.org/jgreenaw/jbashing/get/master.zip -O /tmp/jbashing.zip'
 
-APPROOT=$HOME/.jbashing
-ENABLED_FOLDER=$APPROOT/enabled
-AVAILABLE_FOLDER=$APPROOT/available
-ENABLED_FILES=$APPROOT/enabled/*.sh
+JBAPPROOT=$HOME/.jbashing
+
+JBENABLED_FOLDER=$JBAPPROOT/enabled
+JBAVAILABLE_FOLDER=$JBAPPROOT/available
+JBENABLED_FILES=$JBAPPROOT/enabled/*.sh
 
 for f in $ENABLED_FILES
 do
