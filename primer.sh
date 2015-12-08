@@ -16,8 +16,9 @@ done
 #MANAGEMENT
 function jbenable { ln -s $JBAVAILABLE_FOLDER/$1.sh $JBENABLED_FOLDER/$1.sh; }
 function jbdisable { rm $JBENABLED_FOLDER/$1.sh; }
+function jbupdate { JBCD=`pwd`; cd $JBAPPROOT && git pull && cd $JBCD }
 #function jbinstall { ln -s $1 $JBENABLED_FOLDER/$1; }
 
-export -f jbenable jbdisable #jbinstall
+export -f jbenable jbdisable jbupdate #jbinstall
 
-alias jbupdate='cd $JBAPPROOT && git pull'
+#alias jbupdate='cd $JBAPPROOT && git pull'
