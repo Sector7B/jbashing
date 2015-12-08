@@ -6,10 +6,10 @@ JBAPPROOT=$HOME/.jbashing
 
 JBENABLED_FOLDER=$JBAPPROOT/enabled
 JBAVAILABLE_FOLDER=$JBAPPROOT/available
-JBENABLED_FILES=$JBAPPROOT/enabled/*.sh
+JBEXTRAS_FOLDER=$JBAPPROOT/extras
 
 shopt -s nullglob
-for f in $JBENABLED_FILES
+for f in $JBAPPROOT/enabled/*.sh
 do
   source $f
 done
@@ -19,8 +19,8 @@ shopt -u nullglob
 function jbenable { ln -s $JBAVAILABLE_FOLDER/$1.sh $JBENABLED_FOLDER/$1.sh && source $JBAPPROOT/primer.sh; }
 function jbdisable { rm $JBENABLED_FOLDER/$1.sh && source $JBAPPROOT/primer.sh; }
 function jbupdate { JBCD=`pwd` && cd $JBAPPROOT && git pull && cd $JBCD && source $JBAPPROOT/primer.sh; }
-#function jbinstall { ln -s $1 $JBENABLED_FOLDER/$1; }
+function jbinstall { ln -s $1 $JBENABLED_FOLDER/$2; }
 
-export -f jbenable jbdisable jbupdate #jbinstall
+export -f jbenable jbdisable jbupdate jbinstall
 
 #alias jbupdate='cd $JBAPPROOT && git pull'
