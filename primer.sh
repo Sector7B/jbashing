@@ -14,6 +14,6 @@ do
 done
 
 #MANAGEMENT
-alias jbenable='ln -s $AVAILABLE_FOLDER/$1.sh $ENABLED_FOLDER/$1.sh'
-alias jbdisable='rm $ENABLED_FOLDER/$1.sh'
-alias jbinstall='ln -s $1 $ENABLED_FOLDER/$1'
+alias jbenable='ln -s $JBAVAILABLE_FOLDER/$1.sh $JBENABLED_FOLDER/$1.sh'
+alias jbdisable='rm $JBENABLED_FOLDER/$1.sh'
+alias jbinstall='ln -s $1 $JBENABLED_FOLDER/$1'
