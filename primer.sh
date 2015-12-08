@@ -14,6 +14,8 @@ do
 done
 
 #MANAGEMENT
-alias jbenable='ln -s $JBAVAILABLE_FOLDER/$1.sh $JBENABLED_FOLDER/$1.sh'
-alias jbdisable='rm $JBENABLED_FOLDER/$1.sh'
-alias jbinstall='ln -s $1 $JBENABLED_FOLDER/$1'
+function jbenable { 'ln -s $JBAVAILABLE_FOLDER/$1.sh $JBENABLED_FOLDER/$1.sh' }
+function jbdisable { 'rm $JBENABLED_FOLDER/$1.sh' }
+function jbinstall { 'ln -s $1 $JBENABLED_FOLDER/$1' }
+
+export -f jbenable jbdisable jbinstall
