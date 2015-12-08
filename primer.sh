@@ -13,6 +13,7 @@ for f in $JBENABLED_FILES
 do
   source $f
 done
+shopt -u nullglob
 
 #MANAGEMENT
 function jbenable { ln -s $JBAVAILABLE_FOLDER/$1.sh $JBENABLED_FOLDER/$1.sh && souce $JBAPPROOT/primer.sh; }
