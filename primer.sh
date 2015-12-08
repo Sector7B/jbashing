@@ -8,6 +8,7 @@ JBENABLED_FOLDER=$JBAPPROOT/enabled
 JBAVAILABLE_FOLDER=$JBAPPROOT/available
 JBENABLED_FILES=$JBAPPROOT/enabled/*.sh
 
+shopt -s nullglob
 for f in $JBENABLED_FILES
 do
   source $f
