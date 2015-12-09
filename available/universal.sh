@@ -17,6 +17,10 @@ alias pgrep='pgrep -a'
 alias cdh='cd $HOME'
 alias ag='alias | grep $1'
 
+alias doc='cd $HOME/Documents'
+alias down='cd $HOME/Downloads'
+alias drop='cd $HOME/Dropbox'
+
 function bak { cp $1 $1.$USER.`date "+%Y-%m-%d_%H.%M.%S"`.BAK; }
 function bako { cp $1 $1.ORIG; }
 
