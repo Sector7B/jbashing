@@ -16,7 +16,6 @@ alias h='history | grep $1'
 alias svi='sudo vi $1'
 alias sgy='sudo geany $1'
 alias pgrep='pgrep -a'
-alias cdh='cd $HOME'
 alias ag='alias | grep $1'
 alias ping='ping -c 5'
 
