@@ -10,6 +10,8 @@ alias l.='ll -d .*'
 
 alias mkdir='mkdir -pv'
 alias ping='ping -c 5'
+alias df='df -h'
+alias mem='free -mh'
 alias h='history | grep $1'
 alias svi='sudo vi $1'
 alias sgy='sudo geany $1'
