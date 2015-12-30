@@ -23,6 +23,7 @@ alias doc='cd $HOME/Documents'
 alias down='cd $HOME/Downloads'
 alias drop='cd $HOME/Dropbox'
 alias home='cd $HOME'
+alias apps='cd $HOME/Applications'
 
 function bak { cp $1 $1.$USER.`date "+%Y-%m-%d_%H.%M.%S"`.BAK; }
 function bako { cp $1 $1.ORIG; }
