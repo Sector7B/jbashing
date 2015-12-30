@@ -16,7 +16,8 @@ done
 shopt -u nullglob
 
 #HELP
-alias jbhelp='echo "git clone https://github.com/Sector7B/jbashing.git ~/.jbashing"'
+alias jbhelp='echo "git clone https://github.com/Sector7B/jbashing.git ~/.jbashing
+  CMDS: jbenable, jbdisable, jbupdate, jbinstall, jbprime"'
 #MANAGEMENT
 alias jbprime='source $JBAPPROOT/primer.sh'
 function jbenable { ln -s $JBAVAILABLE_FOLDER/$1.sh $JBENABLED_FOLDER/$1.sh && source $JBAPPROOT/primer.sh; }
