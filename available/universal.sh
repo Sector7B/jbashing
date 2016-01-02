@@ -30,20 +30,8 @@ function bako { cp $1 $1.ORIG; }
 
 export -f bak bako
 
-#debian
-alias aptc='sudo apt-get autoclean; sudo apt-get clean; sudo apt-get autoremove'
-alias aptf='aptitude show $1'
-alias apts='apt-cache search $1'
-alias apti='sudo apt-get install -y $1'
-alias aptu='sudo apt-get update; sudo apt-get -y upgrade'
-alias aptud='sudo apt-get update; sudo apt-get -y dist-upgrade'
 
-#fedora / redhat
-alias dnfc='sudo dnf -y clean all'
-alias dnfu='sudo dnf -y update'
-alias dnfi='sudo dnf -y install $1'
-alias dnfs='dnf search $1'
-alias dnff='dnf info $1'
+
 
 PS_SHORT="\[\e[31m\]\u\[\e[m\]@\[\e[32m\]\h\[\e[m\]:\W \\$> "
 PS_LONG="\n\[\e[35m\]\$(/bin/date)\[\e[m\]\n\[\e[32m\]\w\[\e[m\] : \[\e[36m\]\$(/bin/ls -1 | /usr/bin/wc -l | /bin/sed 's: ::g') files \[\e[m\] \[\e[36m\]\$(/bin/ls -lah | /bin/grep -m 1 total | /bin/sed 's/total //')b\[\e[m\]\n\[\e[31m\]\u\[\e[m\]@\[\e[33m\]\H\[\e[m\] : \[\e[34m\]\$(/usr/bin/tty | /bin/sed -e 's:/dev/::')\[\e[m\]\n\$ "
