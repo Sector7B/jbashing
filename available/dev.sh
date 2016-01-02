@@ -17,3 +17,14 @@ alias devbash='cd $DEVDIR/Bash'
 
 
 source `which virtualenvwrapper_lazy.sh`
+
+
+pips() {
+    package_name=$1
+    requirements_file=$2
+    if [[ -z $requirements_file ]]
+    then
+        requirements_file='./requirements.txt'
+    fi
+    pip install $package_name && pip freeze | grep -i $package_name >> $requirements_file
+}
