@@ -6,7 +6,7 @@ export WORKON_HOME=$DEVDIR/Python/Virtualenv
 export PROJECT_HOME=$DEVDIR/Python/Projects
 
 
-alias mkdevdir='mkdir -p $DEVDIR/Python && mkdir -p $DEVDIR/Python/Projects && mkdir -p $DEVDIR/Python/Config/Virtualenv && mkdir -p $DEVDIR/Java && mkdir -p $DEVDIR/Node && mkdir -p $DEVDIR/Bash'
+alias mkdevdir='mkdir -p $DEVDIR/Python && mkdir -p $DEVDIR/Python/Projects && mkdir -p $DEVDIR/Java && mkdir -p $DEVDIR/Node && mkdir -p $DEVDIR/Bash'
 
 alias dev='cd $DEVDIR'
 alias devpy='cd $DEVDIR/Python'
