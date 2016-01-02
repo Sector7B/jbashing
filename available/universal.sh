@@ -30,9 +30,6 @@ function bako { cp $1 $1.ORIG; }
 
 export -f bak bako
 
-
-
-
 PS_SHORT="\[\e[31m\]\u\[\e[m\]@\[\e[32m\]\h\[\e[m\]:\W \\$> "
 PS_LONG="\n\[\e[35m\]\$(/bin/date)\[\e[m\]\n\[\e[32m\]\w\[\e[m\] : \[\e[36m\]\$(/bin/ls -1 | /usr/bin/wc -l | /bin/sed 's: ::g') files \[\e[m\] \[\e[36m\]\$(/bin/ls -lah | /bin/grep -m 1 total | /bin/sed 's/total //')b\[\e[m\]\n\[\e[31m\]\u\[\e[m\]@\[\e[33m\]\H\[\e[m\] : \[\e[34m\]\$(/usr/bin/tty | /bin/sed -e 's:/dev/::')\[\e[m\]\n\$ "
 
