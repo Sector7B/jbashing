@@ -24,12 +24,12 @@ alias down='cd $HOME/Downloads'
 alias drop='cd $HOME/Dropbox'
 alias home='cd $HOME'
 alias apps='cd $HOME/Applications'
-alias touchcreds='touch $HOME/.$1 && echo username=NONE >> .$1 && username=NONE >> .$1'
+function touchcreds { touch $HOME/.$1 && echo username=NONE >> $HOME/.$1 && echo password=NONE >> $HOME/.$1 && chmod 600 $HOME/.$1 }
 
 function bak { cp $1 $1.$USER.`date "+%Y-%m-%d_%H.%M.%S"`.BAK; }
 function bako { cp $1 $1.ORIG; }
 
-export -f bak bako
+export -f bak bako touchcreds
 
 PS_SHORT="\[\e[31m\]\u\[\e[m\]@\[\e[32m\]\h\[\e[m\]:\W \\$> "
 PS_LONG="\n\[\e[35m\]\$(/bin/date)\[\e[m\]\n\[\e[32m\]\w\[\e[m\] : \[\e[36m\]\$(/bin/ls -1 | /usr/bin/wc -l | /bin/sed 's: ::g') files \[\e[m\] \[\e[36m\]\$(/bin/ls -lah | /bin/grep -m 1 total | /bin/sed 's/total //')b\[\e[m\]\n\[\e[31m\]\u\[\e[m\]@\[\e[33m\]\H\[\e[m\] : \[\e[34m\]\$(/usr/bin/tty | /bin/sed -e 's:/dev/::')\[\e[m\]\n\$ "
