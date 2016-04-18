@@ -10,7 +10,7 @@ alias l.='ll -d .*'
 
 alias mkdir='mkdir -pv'
 alias ping5='ping -c 5'
-alias keepalive='ping -i 15 -n `route -n get default | grep gateway | cut -d ":" -f2-`'
+alias keepalive='ping -i 15 `route -n get default | grep gateway | cut -d ":" -f2-`'
 alias df='df -h'
 alias mem='free -mh'
 alias hgrep='history | grep $1'
