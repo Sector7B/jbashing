@@ -11,14 +11,16 @@ alias l.='ll -d .*'
 alias mkdir='mkdir -pv'
 alias ping5='ping -c 5'
 alias keepalive='ping -i 15 `route -n get default | grep gateway | cut -d ":" -f2-`'
+
 alias df='df -h'
 alias mem='free -mh'
-alias hgrep='history | grep $1'
+
 alias svi='sudo vi $1'
 alias sgy='sudo geany $1'
+
+alias hgrep='history | grep $1'
 alias pgrep='pgrep -a'
 alias agrep='alias | grep $1'
-alias ping='ping -c 5'
 
 alias doc='cd $HOME/Documents'
 alias down='cd $HOME/Downloads'
