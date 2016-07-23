@@ -10,3 +10,6 @@ alias yumu='sudo yum -y update'
 alias yumi='sudo yum -y install'
 alias yums='yum search'
 alias yumf='yum info'
+
+
+alias fedora_upgrade='rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$1-$(uname -i) && dnf upgrade -y && dnf clean all && dnf --releasever=$1 --setopt=deltarpm=false distro-sync -y'
