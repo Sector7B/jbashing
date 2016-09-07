@@ -14,7 +14,8 @@ alias devjava='cd $DEVDIR/Java'
 alias devnode='cd $DEVDIR/Node'
 alias devbash='cd $DEVDIR/Bash'
 
-
+alias python='python3'
+alias pip='pip3'
 
 source `which virtualenvwrapper_lazy.sh`
 
